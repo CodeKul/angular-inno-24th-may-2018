@@ -1,3 +1,4 @@
+import { AdminGuard } from './admin/admin.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +23,7 @@ import { AdminComponent } from './admin/admin.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
