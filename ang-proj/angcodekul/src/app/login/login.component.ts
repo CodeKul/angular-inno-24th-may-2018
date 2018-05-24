@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -15,9 +16,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSub() {
+  onSub( frm : NgForm) {
     console.log(`Submitted ${new Date()}`)
+    console.log(frm.value)
 
-    this.router.navigate(['admin'])
+    this.router.navigate(['admin',frm.value.eml])
   }
 }

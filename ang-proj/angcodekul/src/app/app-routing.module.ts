@@ -5,8 +5,9 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent }
+  { path: 'admin/:eml', component: AdminComponent }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
